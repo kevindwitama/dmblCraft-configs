@@ -1,0 +1,50 @@
+# Configuration file for Tuinity.
+use-new-light-engine: true
+pistons-can-push-tile-entities: false
+max-pending-chunk-loads-per-player: 1
+lag-compensate-block-breaking: true
+target-chunk-sends-per-player-per-second: 25.0
+delay-chunkunloads-by: 1
+config-version-please-do-not-modify-me: 2
+world-settings:
+  default:
+    no-tick-view-distance: 16
+    optimized-tracker: true
+    optimized-tracker-track-range: -1
+    optimized-tracker-untrack-range: -1
+    spawn-limits:
+      water-ambient: -1
+      monsters: -1
+      animals: -1
+      water-animals: -1
+      ambient: -1
+    worldgen:
+      seeds:
+        populator: default
+  ishtar: {}
+  ishtar_nether: {}
+  ishtar_the_end: {}
+  illyria: {}
+  oranua: {}
+  rodina: {}
+  creative: {}
+  illyria_nether: {}
+  illyria_the_end: {}
+  oranua_nether: {}
+  oranua_the_end: {}
+  rodina_nether: {}
+  rodina_the_end: {}
+  cityworld: {}
+  umoa: {}
+  umoa_nether: {}
+  umoa_the_end: {}
+packet-limiter:
+  kick-message: '&cSent too many packets'
+  limits:
+    all:
+      interval: 7.0
+      max-packet-rate: 500.0
+    PacketPlayInAutoRecipe:
+      interval: 4.0
+      max-packet-rate: 5.0
+      action: DROP
