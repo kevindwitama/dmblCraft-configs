@@ -79,7 +79,7 @@ world-settings:
           count-as-sleeping: true
           update-tab-list: false
         netherite-fire-resistance:
-          duration: 600
+          duration: 60
           amplifier: 0
           ambient: false
           show-particles: false
