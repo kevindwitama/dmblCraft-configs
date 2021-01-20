@@ -296,7 +296,7 @@ world-settings:
       - oak_planks
       - stone
     keep-spawn-loaded: true
-    no-tick-view-distance: 16
+    no-tick-view-distance: 12
   umoa_nether:
     anti-xray:
       enabled: false
@@ -312,7 +312,7 @@ world-settings:
     no-tick-view-distance: 10
   umoa_the_end:
     auto-save-interval: 12000
-    no-tick-view-distance: 16
+    no-tick-view-distance: 12
   rodina:
     anti-xray:
       enabled: false
@@ -330,7 +330,7 @@ world-settings:
       replacement-blocks:
       - oak_planks
       - stone
-    no-tick-view-distance: 16
+    no-tick-view-distance: 12
   rodina_nether:
     anti-xray:
       enabled: false
@@ -392,4 +392,4 @@ world-settings:
     no-tick-view-distance: 10
   creative:
     auto-save-interval: 12000
-    no-tick-view-distance: 16
+    no-tick-view-distance: 12
