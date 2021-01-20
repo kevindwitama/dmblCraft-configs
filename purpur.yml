@@ -52,6 +52,9 @@ settings:
 world-settings:
   default:
     gameplay-mechanics:
+      impose-teleport-restrictions-on-gateways: false
+      fireballs-bypass-mob-griefing: false
+      note-block-ignore-above: false
       entity-lifespan: 0
       entity-left-handed-chance: 0.5
       use-better-mending: false
@@ -62,10 +65,11 @@ world-settings:
       persistent-tileentity-display-names-and-lore: true
       persistent-droppable-entity-display-names: true
       trident-loyalty-void-return-height: -1.0
-      void-damage-height: -1.0
+      void-damage-height: -64.0
       raid-cooldown-seconds: 0
       animal-breeding-cooldown-seconds: 0
       player:
+        fix-stuck-in-portal: false
         teleport-if-outside-border: true
         totem-of-undying-works-in-inventory: true
         spawn-invulnerable-ticks: 100
@@ -120,9 +124,13 @@ world-settings:
         nighttime: 12000
       item:
         immune:
+          cactus: []
           explosion: []
           fire: []
       armorstand:
+        can-movement-tick: true
+        can-move-in-water: true
+        can-move-in-water-over-fence: true
         set-name-visible-when-placing-with-custom-name: false
         fix-nametags: false
         step-height: 0.0
@@ -170,8 +178,11 @@ world-settings:
         max-height: 16
         small-height: 10
       farmland:
+        only-players-trample: true
+        feather-fall-distance-affects-trampling: true
+        bypass-mob-griefing: false
         gets-moist-from-below: true
-        use-alpha-farmland: true
+        use-alpha-farmland: false
       kelp:
         max-growth-age: 25
       lava:
@@ -186,6 +197,7 @@ world-settings:
         explosion-fire: true
         explosion-effect: BREAK
       turtle_egg:
+        bypass-mob-griefing: false
         break-from-exp-orbs: false
         break-from-items: false
         break-from-minecarts: true
@@ -205,6 +217,7 @@ world-settings:
         right-click-edit: true
     mobs:
       pillager:
+        bypass-mob-griefing: false
         ridable: false
         ridable-in-water: false
         attributes:
@@ -246,6 +259,7 @@ world-settings:
         attributes:
           max_health: 80.0
       ender_dragon:
+        bypass-mob-griefing: false
         ridable: false
         ridable-in-water: false
         ridable-max-y: 256.0
@@ -360,6 +374,7 @@ world-settings:
           spawn_reinforcements: 0.1
           max_health: 20.0
       enderman:
+        bypass-mob-griefing: false
         ridable: false
         ridable-in-water: false
         allow-griefing: false
@@ -414,6 +429,7 @@ world-settings:
         attributes:
           max_health: 20.0
       evoker:
+        bypass-mob-griefing: false
         ridable: false
         ridable-in-water: false
         attributes:
@@ -440,6 +456,7 @@ world-settings:
         attributes:
           max_health: 30.0
       fox:
+        bypass-mob-griefing: false
         ridable: false
         ridable-in-water: false
         tulips-change-type: false
@@ -479,7 +496,7 @@ world-settings:
           max_health: 10.0
       dolphin:
         ridable: false
-        disable-treasure-searching: false
+        disable-treasure-searching: true
         spit:
           cooldown: 20
           speed: 1.0
@@ -601,6 +618,7 @@ world-settings:
         attributes:
           max_health: 30.0
       zombie:
+        bypass-mob-griefing: false
         ridable: false
         ridable-in-water: false
         aggressive-towards-villager-when-lagging: false
@@ -613,6 +631,7 @@ world-settings:
           spawn_reinforcements: 0.1
           max_health: 20.0
       sheep:
+        bypass-mob-griefing: false
         ridable: false
         ridable-in-water: false
         breeding-delay-ticks: 6000
@@ -634,7 +653,7 @@ world-settings:
       villager:
         ridable: false
         ridable-in-water: false
-        brain-ticks: 1
+        brain-ticks: 4
         use-brain-ticks-only-when-lagging: true
         can-be-leashed: false
         bypass-mob-griefing: false
@@ -643,11 +662,11 @@ world-settings:
         clerics-farm-warts: false
         cleric-wart-farmers-throw-warts-at-villagers: true
         spawn-iron-golem:
-          radius: 0
-          limit: 0
+          radius: 3
+          limit: 1
         lobotomize:
           enabled: true
-          check-interval: 60
+          check-interval: 600
         attributes:
           max_health: 20.0
       spider:
@@ -663,6 +682,7 @@ world-settings:
         attributes:
           max_health: 24.0
       ravager:
+        bypass-mob-griefing: false
         ridable: false
         ridable-in-water: false
         attributes:
@@ -672,6 +692,7 @@ world-settings:
         attributes:
           max_health: 3.0
       silverfish:
+        bypass-mob-griefing: false
         ridable: false
         ridable-in-water: false
         attributes:
@@ -708,6 +729,7 @@ world-settings:
         attributes:
           max_health: 30.0
       snow_golem:
+        bypass-mob-griefing: false
         ridable: false
         ridable-in-water: false
         leave-trail-when-ridden: false
@@ -725,6 +747,7 @@ world-settings:
         attributes:
           max_health: 20.0
       wither:
+        bypass-mob-griefing: false
         ridable: false
         ridable-in-water: false
         ridable-max-y: 256.0
@@ -737,6 +760,7 @@ world-settings:
         attributes:
           max_health: 3.0
       rabbit:
+        bypass-mob-griefing: false
         ridable: false
         ridable-in-water: false
         spawn-toast-chance: 0.0
