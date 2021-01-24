@@ -69,9 +69,9 @@ world-settings:
     end-portal-sound-radius: 0
     seed-endcity: 10387313
     trident-despawn-rate: 1200
-    view-distance: default
+    view-distance: 8
     verbose: true
-    mob-spawn-range: 5
+    mob-spawn-range: 3
     item-despawn-rate: 6000
     hopper-amount: 1
     arrow-despawn-rate: 600
