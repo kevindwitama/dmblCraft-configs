@@ -89,6 +89,7 @@ world-settings:
           show-particles: false
           show-icon: true
       infinity-bow:
+        works-without-arrows: false
         normal-arrows: true
         spectral-arrows: false
         tipped-arrows: false
@@ -602,7 +603,7 @@ world-settings:
       polar_bear:
         ridable: false
         ridable-in-water: false
-        breedable-item: ''
+        breedable-item: salmon
         breeding-delay-ticks: 6000
         attributes:
           max_health: 30.0
