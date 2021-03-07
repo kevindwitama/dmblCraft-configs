@@ -52,7 +52,7 @@ settings:
 world-settings:
   default:
     gameplay-mechanics:
-      always-tame-in-creative: false
+      always-tame-in-creative: true
       impose-teleport-restrictions-on-gateways: false
       fireballs-bypass-mob-griefing: false
       note-block-ignore-above: false
@@ -70,7 +70,7 @@ world-settings:
       raid-cooldown-seconds: 0
       animal-breeding-cooldown-seconds: 0
       player:
-        one-punch-in-creative: false
+        one-punch-in-creative: true
         fix-stuck-in-portal: false
         teleport-if-outside-border: true
         totem-of-undying-works-in-inventory: true
