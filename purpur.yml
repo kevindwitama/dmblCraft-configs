@@ -52,6 +52,7 @@ settings:
 world-settings:
   default:
     gameplay-mechanics:
+      always-tame-in-creative: false
       impose-teleport-restrictions-on-gateways: false
       fireballs-bypass-mob-griefing: false
       note-block-ignore-above: false
@@ -69,6 +70,7 @@ world-settings:
       raid-cooldown-seconds: 0
       animal-breeding-cooldown-seconds: 0
       player:
+        one-punch-in-creative: false
         fix-stuck-in-portal: false
         teleport-if-outside-border: true
         totem-of-undying-works-in-inventory: true
@@ -128,6 +130,9 @@ world-settings:
           cactus: []
           explosion: []
           fire: []
+        shears:
+          damage-if-sprinting: false
+          sprinting-damage: 1.0
       armorstand:
         can-movement-tick: true
         can-move-in-water: true
@@ -216,6 +221,19 @@ world-settings:
       sign:
         allow-colors: true
         right-click-edit: true
+      end-crystal:
+        baseless:
+          explode: true
+          explosion-power: 6.0
+          explosion-fire: false
+          explosion-effect: DESTROY
+        base:
+          explode: true
+          explosion-power: 6.0
+          explosion-fire: false
+          explosion-effect: DESTROY
+      blue_ice:
+        allow-snow-formation: true
     mobs:
       pillager:
         bypass-mob-griefing: false
@@ -224,6 +242,7 @@ world-settings:
         attributes:
           max_health: 24.0
       phantom:
+        allow-griefing: false
         ridable: false
         ridable-in-water: false
         ridable-max-y: 256.0
@@ -260,6 +279,7 @@ world-settings:
         attributes:
           max_health: 80.0
       ender_dragon:
+        can-ride-vehicles: false
         bypass-mob-griefing: false
         ridable: false
         ridable-in-water: false
@@ -375,6 +395,7 @@ world-settings:
           spawn_reinforcements: 0.1
           max_health: 20.0
       enderman:
+        takes-damage-from-water: true
         bypass-mob-griefing: false
         ridable: false
         ridable-in-water: false
@@ -393,6 +414,7 @@ world-settings:
         attributes:
           max_health: 10.0
       ghast:
+        allow-griefing: true
         ridable: false
         ridable-in-water: false
         ridable-max-y: 256.0
@@ -424,6 +446,7 @@ world-settings:
             min: 0.175
             max: 0.175
       blaze:
+        takes-damage-from-water: true
         ridable: false
         ridable-in-water: false
         ridable-max-y: 256.0
@@ -652,6 +675,7 @@ world-settings:
         attributes:
           max_health: 14.0
       villager:
+        breeding-delay-ticks: 6000
         ridable: false
         ridable-in-water: false
         brain-ticks: 4
@@ -718,6 +742,7 @@ world-settings:
         attributes:
           max_health: size * size
       strider:
+        takes-damage-from-water: true
         ridable: false
         ridable-in-water: false
         breeding-delay-ticks: 6000
@@ -730,6 +755,7 @@ world-settings:
         attributes:
           max_health: 30.0
       snow_golem:
+        takes-damage-from-water: true
         bypass-mob-griefing: false
         ridable: false
         ridable-in-water: false
@@ -748,6 +774,7 @@ world-settings:
         attributes:
           max_health: 20.0
       wither:
+        can-ride-vehicles: false
         bypass-mob-griefing: false
         ridable: false
         ridable-in-water: false

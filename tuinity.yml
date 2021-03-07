@@ -1,4 +1,5 @@
 # Configuration file for Tuinity.
+send-full-pos-for-hard-colliding-entities: true
 use-new-light-engine: true
 pistons-can-push-tile-entities: false
 max-pending-chunk-loads-per-player: 1
