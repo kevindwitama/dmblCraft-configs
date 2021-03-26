@@ -88,6 +88,7 @@ messages:
     connection-throttle: Connection throttled! Please wait before reconnecting.
 world-settings:
   default:
+    allow-using-signs-inside-spawn-protection: false
     fix-wither-targeting-bug: true
     update-pathfinding-on-block-update: false
     ender-dragons-death-always-places-dragon-egg: false
@@ -114,7 +115,7 @@ world-settings:
     per-player-mob-spawns: true
     count-all-mobs-for-spawning: false
     auto-save-interval: -1
-    max-auto-save-chunks-per-tick: 6
+    max-auto-save-chunks-per-tick: 8
     baby-zombie-movement-speed: 0.5
     spawner-nerfed-mobs-should-jump: false
     keep-spawn-loaded: false
@@ -143,7 +144,7 @@ world-settings:
     remove-corrupt-tile-entities: false
     filter-nbt-data-from-spawn-eggs-and-related: true
     enable-treasure-maps: true
-    treasure-maps-return-already-discovered: false
+    treasure-maps-return-already-discovered: true
     armor-stands-do-collision-entity-lookups: false
     max-entity-collisions: 2
     parrots-are-unaffected-by-player-movement: true

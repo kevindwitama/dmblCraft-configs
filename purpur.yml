@@ -9,7 +9,7 @@
 # Wiki: https://github.com/pl3xgaming/Purpur/wiki 
 
 verbose: false
-config-version: 10
+config-version: 11
 settings:
   server-mod-name: dmblCraft
   tps-catchup: false
@@ -19,14 +19,15 @@ settings:
   dont-send-useless-entity-packets: true
   allow-water-placement-in-the-end: true
   blocks:
-    disable-mushroom-updates: true
+    disable-note-block-updates: false
+    disable-mushroom-updates: false
     barrel:
       six-rows: false
     ender_chest:
       six-rows: false
       use-permissions-for-rows: false
     crying_obsidian:
-      valid-for-portal-frame: false
+      valid-for-portal-frame: true
   messages:
     afk-broadcast-away: §e§o%s is now AFK
     afk-broadcast-back: §e§o%s is no longer AFK
@@ -48,10 +49,13 @@ settings:
     suppress-ignored-advancement-warnings: false
     hex-color-support-in-console: true
   enchantment:
+    allow-infinity-on-crossbow: false
+    allow-unsafe-enchants: false
     allow-infinity-and-mending-together: true
 world-settings:
   default:
     gameplay-mechanics:
+      tick-fluids: true
       always-tame-in-creative: true
       impose-teleport-restrictions-on-gateways: false
       fireballs-bypass-mob-griefing: false
@@ -70,6 +74,8 @@ world-settings:
       raid-cooldown-seconds: 0
       animal-breeding-cooldown-seconds: 0
       player:
+        sleep-ignore-nearby-mobs: true
+        can-skip-night: true
         one-punch-in-creative: true
         fix-stuck-in-portal: false
         teleport-if-outside-border: true
@@ -133,7 +139,13 @@ world-settings:
         shears:
           damage-if-sprinting: false
           sprinting-damage: 1.0
+        ender-pearl:
+          damage: 5.0
+          cooldown: 20
+          creative-cooldown: 20
+          endermite-spawn-chance: 0.5
       armorstand:
+        place-with-arms-visible: false
         can-movement-tick: true
         can-move-in-water: true
         can-move-in-water-over-fence: true
@@ -154,8 +166,6 @@ world-settings:
         spawner-lore:
         - Spawns a {mob}
         tools:
-        - minecraft:iron_pickaxe
-        - minecraft:golden_pickaxe
         - minecraft:diamond_pickaxe
         - minecraft:netherite_pickaxe
       elytra:
@@ -165,7 +175,20 @@ world-settings:
         damage-per-boost:
           firework: 0
           trident: 0
+      drowning:
+        air-ticks: 300
+        ticks-per-damage: 20
+        damage-from-drowning: 2.0
+      projectile-offset:
+        bow: 1.0
+        crossbow: 1.0
+        egg: 1.0
+        ender-pearl: 1.0
+        throwable-potion: 1.0
+        trident: 1.0
+        snowball: 1.0
     blocks:
+      no-random-tick: []
       no-tick: []
       respawn_anchor:
         explode: true
@@ -184,6 +207,7 @@ world-settings:
         max-height: 16
         small-height: 10
       farmland:
+        disable-trampling: false
         only-players-trample: true
         feather-fall-distance-affects-trampling: true
         bypass-mob-griefing: false
@@ -201,7 +225,7 @@ world-settings:
         explode: true
         explosion-power: 5.0
         explosion-fire: true
-        explosion-effect: BREAK
+        explosion-effect: DESTROY
       turtle_egg:
         bypass-mob-griefing: false
         break-from-exp-orbs: false
@@ -233,7 +257,20 @@ world-settings:
           explosion-fire: false
           explosion-effect: DESTROY
       blue_ice:
-        allow-snow-formation: true
+        allow-mob-spawns: true
+        allow-snow-formation: false
+      sponge:
+        absorption:
+          area: 64
+          radius: 6
+      composter:
+        sneak-to-bulk-process: true
+      packed_ice:
+        allow-mob-spawns: true
+      slab:
+        break-individual-slabs-when-sneaking: true
+      door:
+        requires-redstone: []
     mobs:
       pillager:
         bypass-mob-griefing: false
@@ -307,6 +344,7 @@ world-settings:
         attributes:
           max_health: 50.0
       wandering_trader:
+        allow-trading: true
         ridable: false
         ridable-in-water: false
         can-be-leashed: false
@@ -372,6 +410,7 @@ world-settings:
           spawn_reinforcements: 0.0
           max_health: 20.0
       creeper:
+        explode-when-killed: false
         ridable: false
         ridable-in-water: false
         allow-griefing: true
@@ -395,6 +434,9 @@ world-settings:
           spawn_reinforcements: 0.1
           max_health: 20.0
       enderman:
+        aggressive-towards-spawned-endermites: true
+        ignore-players-wearing-dragon-head: true
+        disable-player-stare-aggression: false
         takes-damage-from-water: true
         bypass-mob-griefing: false
         ridable: false
@@ -432,7 +474,8 @@ world-settings:
         attributes:
           max_health: 100.0
       llama:
-        ridable: false
+        join-caravans: false
+        ridable: true
         ridable-in-water: false
         breeding-delay-ticks: 6000
         attributes:
@@ -519,7 +562,7 @@ world-settings:
         attributes:
           max_health: 10.0
       dolphin:
-        ridable: false
+        ridable: true
         disable-treasure-searching: true
         spit:
           cooldown: 20
@@ -675,10 +718,11 @@ world-settings:
         attributes:
           max_health: 14.0
       villager:
+        allow-trading: true
         breeding-delay-ticks: 6000
         ridable: false
         ridable-in-water: false
-        brain-ticks: 4
+        brain-ticks: 3
         use-brain-ticks-only-when-lagging: true
         can-be-leashed: false
         bypass-mob-griefing: false
@@ -707,6 +751,17 @@ world-settings:
         attributes:
           max_health: 24.0
       ravager:
+        griefable-blocks:
+        - minecraft:oak_leaves
+        - minecraft:spruce_leaves
+        - minecraft:birch_leaves
+        - minecraft:jungle_leaves
+        - minecraft:acacia_leaves
+        - minecraft:dark_oak_leaves
+        - minecraft:beetroots
+        - minecraft:carrots
+        - minecraft:potatoes
+        - minecraft:wheat
         bypass-mob-griefing: false
         ridable: false
         ridable-in-water: false
