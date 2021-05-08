@@ -77,6 +77,9 @@ settings:
       other items
     allow-headless-pistons-readme: This setting controls if players should be able
       to create headless pistons.
+  console:
+    enable-brigadier-highlighting: true
+    enable-brigadier-completions: true
 messages:
   no-permission: '&cI''m sorry, but you do not have permission to perform this command.
     Please contact the server administrators if you believe that this is in error.'
@@ -168,8 +171,8 @@ world-settings:
       MinimumTicks: 100
       MaximumTicks: 600
     despawn-ranges:
-      soft: 28
-      hard: 96
+      soft: 30
+      hard: 72
     game-mechanics:
       disable-mob-spawner-spawn-egg-transformation: false
       fix-curing-zombie-villager-discount-exploit: false
@@ -253,11 +256,35 @@ world-settings:
         ROTTEN_FLESH: 600
         BONE: 600
         ARROW: 600
+        DIAMOND: 18000
+        DIAMOND_ORE: 18000
+        DIAMOND_BLOCK: 36000
+        DIAMOND_SWORD: 36000
+        DIAMOND_SHOVEL: 36000
+        DIAMOND_PICKAXE: 36000
+        DIAMOND_AXE: 36000
+        DIAMOND_HOE: 36000
+        DIAMOND_HELMET: 36000
+        DIAMOND_CHESTPLATE: 36000
+        DIAMOND_LEGGINGS: 36000
+        DIAMOND_BOOTS: 36000
+        NETHERITE_SCRAP: 18000
+        ANCIENT_DEBRIS: 18000
+        NETHERITE_BLOCK: 36000
+        NETHERITE_SWORD: 36000
+        NETHERITE_SHOVEL: 36000
+        NETHERITE_PICKAXE: 36000
+        NETHERITE_AXE: 36000
+        NETHERITE_HOE: 36000
+        NETHERITE_HELMET: 36000
+        NETHERITE_CHESTPLATE: 36000
+        NETHERITE_LEGGINGS: 36000
+        NETHERITE_BOOTS: 36000
     generator-settings:
       flat-bedrock: false
     baby-zombie-movement-modifier: 0.5
     viewdistances:
-      no-tick-view-distance: 12
+      no-tick-view-distance: 16
     wandering-trader:
       spawn-minute-length: 1200
       spawn-day-length: 24000
@@ -275,9 +302,23 @@ world-settings:
       - HARD
     entity-per-chunk-save-limit:
       experience_orb: 16
-      snowball: 16
-      ender_pearl: 16
       arrow: 16
+      dragonfireball: 3
+      egg: 8
+      ender_pearl: 8
+      fireball: 8
+      firework: 8
+      largefireball: 8
+      lingeringpotion: 8
+      llamaspit: 3
+      shulkerbullet: 8
+      sizedfireball: 8
+      snowball: 8
+      spectralarrow: 16
+      splashpotion: 3
+      thrownexpbottle: 3
+      trident: 16
+      witherskull: 4
   umoa:
     anti-xray:
       enabled: false

@@ -29,7 +29,7 @@ messages:
   server-full: The server is full!
   outdated-client: Outdated client! Please use {0}
   outdated-server: Outdated server! I'm still on {0}
-  restart: Server is restarting
+  restart: dmblCraft will BRB.
 settings:
   log-villager-deaths: true
   timeout-time: 60
@@ -69,7 +69,7 @@ world-settings:
     end-portal-sound-radius: 0
     seed-endcity: 10387313
     trident-despawn-rate: 1200
-    view-distance: 8
+    view-distance: 4
     verbose: true
     mob-spawn-range: 3
     item-despawn-rate: 6000
@@ -111,19 +111,19 @@ world-settings:
       vine-modifier: 100
       cocoa-modifier: 100
     merge-radius:
-      item: 4.0
-      exp: 6.0
+      item: 3.5
+      exp: 4.0
     entity-activation-range:
-      villagers: 16
-      flying-monsters: 32
-      villagers-work-immunity-after: 100
-      villagers-work-immunity-for: 20
-      villagers-active-for-panic: true
-      water: 8
       animals: 16
+      flying-monsters: 48
       monsters: 24
       raiders: 48
       misc: 8
+      water: 8
+      villagers: 16
+      villagers-work-immunity-after: 100
+      villagers-work-immunity-for: 20
+      villagers-active-for-panic: true
       tick-inactive-villagers: false
       wake-up-inactive:
         animals-max-per-tick: 2

@@ -28,6 +28,9 @@
   # If you want further away entities to tick less often, use 8.
   # If you want further away entities to tick more often, try 10.
   activation-dist-mod = 9
+  # This value determines how far away an entity has to be
+  # from the player to start being effected by DEAR.
+  start-distance = 12
 
 # A list of entities to use the dynamic activation range
 # to modify how often their behaviors are ticked
@@ -39,4 +42,12 @@
 # Options for connecting to Airplane's online utilities
 [web-services]
   token = ""
+
+# Configures settings for generic entities
+[entities]
+  despawn-check-freq = 8
+
+# Settings for things that don't belong elsewhere
+[misc]
+  disable-method-profiler = true
 
