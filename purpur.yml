@@ -66,6 +66,8 @@ world-settings:
       void-damage-dealt: 4.0
       shovel-turns-block-to-grass-path:
       - minecraft:grass_block
+      - minecraft:dirt
+      - minecraft:podzol
       tick-fluids: true
       always-tame-in-creative: true
       impose-teleport-restrictions-on-gateways: false
