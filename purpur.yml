@@ -11,7 +11,7 @@
 verbose: false
 config-version: 12
 settings:
-  server-mod-name: dmblCraft
+  server-mod-name: dmblCraft (Purpur)
   tps-catchup: false
   lagging-threshold: 19.0
   use-alternate-keepalive: true
@@ -63,13 +63,14 @@ settings:
 world-settings:
   default:
     gameplay-mechanics:
-      void-damage-dealt: 4.0
+      void-damage-dealt: 1.0
       shovel-turns-block-to-grass-path:
-      - minecraft:grass_block
+      - minecraft:coarse_dirt
       - minecraft:dirt
+      - minecraft:grass_block
       - minecraft:podzol
       tick-fluids: true
-      always-tame-in-creative: true
+      always-tame-in-creative: false
       impose-teleport-restrictions-on-gateways: false
       fireballs-bypass-mob-griefing: false
       note-block-ignore-above: false
@@ -87,9 +88,9 @@ world-settings:
       raid-cooldown-seconds: 0
       animal-breeding-cooldown-seconds: 0
       player:
-        sleep-ignore-nearby-mobs: true
+        sleep-ignore-nearby-mobs: false
         can-skip-night: true
-        one-punch-in-creative: true
+        one-punch-in-creative: false
         fix-stuck-in-portal: true
         teleport-if-outside-border: true
         totem-of-undying-works-in-inventory: true
@@ -370,7 +371,7 @@ world-settings:
         allow-trading: true
         ridable: false
         ridable-in-water: false
-        can-be-leashed: false
+        can-be-leashed: true
         follow-emerald-blocks: true
         attributes:
           max_health: 20.0
@@ -748,7 +749,7 @@ world-settings:
         ridable-in-water: false
         brain-ticks: 3
         use-brain-ticks-only-when-lagging: true
-        can-be-leashed: false
+        can-be-leashed: true
         bypass-mob-griefing: false
         follow-emerald-blocks: true
         can-breed: true
@@ -787,7 +788,7 @@ world-settings:
         - minecraft:potatoes
         - minecraft:wheat
         bypass-mob-griefing: false
-        ridable: false
+        ridable: true
         ridable-in-water: false
         attributes:
           max_health: 100.0
@@ -885,3 +886,12 @@ world-settings:
       babies-are-ridable: false
       untamed-tamables-are-ridable: false
       use-night-vision: false
+  default:
+    gameplay-mechanics:
+      void-damage-height: -1.0
+      always-tame-in-creative: true
+      entities-can-use-portals: false
+      player:
+        one-punch-in-creative: true
+    ridable-settings:
+      untamed-tamables-are-ridable: true

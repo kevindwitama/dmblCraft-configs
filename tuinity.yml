@@ -22,23 +22,52 @@ world-settings:
     worldgen:
       seeds:
         populator: default
-  ishtar: {}
-  ishtar_nether: {}
-  ishtar_the_end: {}
-  illyria: {}
-  oranua: {}
-  rodina: {}
-  creative: {}
-  illyria_nether: {}
-  illyria_the_end: {}
-  oranua_nether: {}
-  oranua_the_end: {}
-  rodina_nether: {}
-  rodina_the_end: {}
-  cityworld: {}
   umoa: {}
-  umoa_nether: {}
+  umoa_nether:
+    no-tick-view-distance: 12
   umoa_the_end: {}
+  illyria:
+    spawn-limits:
+      monsters: 20
+      animals: 5
+      water-animals: 2
+      water-ambient: 2
+      ambient: 1
+  oranua:
+    spawn-limits:
+      monsters: 20
+      animals: 5
+      water-animals: 2
+      water-ambient: 2
+      ambient: 1
+  ishtar:
+    spawn-limits:
+      monsters: 20
+      animals: 5
+      water-animals: 2
+      water-ambient: 2
+      ambient: 1
+  rodina:
+    spawn-limits:
+      monsters: 20
+      animals: 5
+      water-animals: 2
+      water-ambient: 2
+      ambient: 1
+  illyria_nether:
+    no-tick-view-distance: 10
+  illyria_the_end: {}
+  oranua_nether:
+    no-tick-view-distance: 10
+  oranua_the_end: {}
+  ishtar_nether:
+    no-tick-view-distance: 10
+  ishtar_the_end: {}
+  rodina_nether:
+    no-tick-view-distance: 10
+  rodina_the_end: {}
+  creative: {}
+  cityworld: {}
 packet-limiter:
   kick-message: '&cSent too many packets'
   limits:
