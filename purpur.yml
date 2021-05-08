@@ -886,7 +886,7 @@ world-settings:
       babies-are-ridable: false
       untamed-tamables-are-ridable: false
       use-night-vision: false
-  default:
+  creative:
     gameplay-mechanics:
       void-damage-height: -1.0
       always-tame-in-creative: true
