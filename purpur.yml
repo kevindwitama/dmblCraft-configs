@@ -13,7 +13,7 @@ config-version: 12
 settings:
   server-mod-name: dmblCraft (Purpur)
   tps-catchup: false
-  lagging-threshold: 19.0
+  lagging-threshold: 18.5
   use-alternate-keepalive: true
   disable-give-dropping: true
   dont-send-useless-entity-packets: true
@@ -267,7 +267,7 @@ world-settings:
           explode: true
           explosion-power: 6.0
           explosion-fire: false
-          explosion-effect: DESTROY
+          explosion-effect: NONE
         base:
           explode: true
           explosion-power: 6.0
@@ -839,7 +839,7 @@ world-settings:
         bypass-mob-griefing: false
         ridable: false
         ridable-in-water: false
-        leave-trail-when-ridden: false
+        leave-trail-when-ridden: true
         drop-pumpkin-when-sheared: true
         pumpkin-can-be-added-back: true
         min-shoot-interval-ticks: 20
@@ -872,8 +872,8 @@ world-settings:
         bypass-mob-griefing: false
         ridable: false
         ridable-in-water: false
-        spawn-toast-chance: 0.0
-        spawn-killer-rabbit-chance: 0.0
+        spawn-toast-chance: 0.001
+        spawn-killer-rabbit-chance: 0.0004
         breeding-delay-ticks: 6000
         attributes:
           max_health: 3.0
@@ -893,5 +893,16 @@ world-settings:
       entities-can-use-portals: false
       player:
         one-punch-in-creative: true
+    blocks:
+      respawn_anchor:
+        explosion-fire: false
+        explosion-effect: NONE
+      end-crystal:
+        baseless:
+          explosion-effect: NONE
+        base:
+          explosion-effect: NONE
+      farmland:
+        disable-trampling: true
     ridable-settings:
       untamed-tamables-are-ridable: true
