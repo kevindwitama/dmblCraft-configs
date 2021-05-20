@@ -31,6 +31,7 @@ settings:
     beehive:
       max-bees-inside: 3
   messages:
+    unverified-username: default
     credits-command-output: §a%s has been shown the end credits
     afk-broadcast-away: §e§o%s is now AFK
     afk-broadcast-back: §e§o%s is no longer AFK
@@ -56,6 +57,7 @@ settings:
     allow-unsafe-enchants: false
     allow-infinity-and-mending-together: true
   command:
+    hide-hidden-players-from-entity-selector: false
     gamemode:
       requires-specific-permission: false
   advancement:
@@ -63,6 +65,7 @@ settings:
 world-settings:
   default:
     gameplay-mechanics:
+      entity-blindness-multiplier: 1.0
       void-damage-dealt: 1.0
       shovel-turns-block-to-grass-path:
       - minecraft:coarse_dirt
@@ -88,6 +91,7 @@ world-settings:
       raid-cooldown-seconds: 0
       animal-breeding-cooldown-seconds: 0
       player:
+        critical-damage-multiplier: 1.5
         sleep-ignore-nearby-mobs: false
         can-skip-night: true
         one-punch-in-creative: false
@@ -204,6 +208,8 @@ world-settings:
           block-speed:
             grass_block: 0.1
             stone: 0.5
+        powered-rail:
+          boost-modifier: 0.06
     blocks:
       no-random-tick: []
       no-tick: []
@@ -295,6 +301,8 @@ world-settings:
         damage-with-frost-walker: false
       piston:
         block-push-limit: 12
+      dragon_egg:
+        teleport: true
     mobs:
       pillager:
         bypass-mob-griefing: false
@@ -434,6 +442,7 @@ world-settings:
           spawn_reinforcements: 0.0
           max_health: 20.0
       creeper:
+        health-impacts-explosion: true
         explode-when-killed: false
         ridable: false
         ridable-in-water: false
@@ -562,6 +571,7 @@ world-settings:
         attributes:
           max_health: 32.0
       iron_golem:
+        poppy-calms-anger: true
         ridable: false
         ridable-in-water: false
         can-swim: false
@@ -673,6 +683,7 @@ world-settings:
         attributes:
           max_health: 20.0
       parrot:
+        can-breed: true
         ridable: false
         ridable-in-water: false
         ridable-max-y: 256.0
@@ -873,7 +884,7 @@ world-settings:
         ridable: false
         ridable-in-water: false
         spawn-toast-chance: 0.001
-        spawn-killer-rabbit-chance: 0.0004
+        spawn-killer-rabbit-chance: 4.0E-4
         breeding-delay-ticks: 6000
         attributes:
           max_health: 3.0

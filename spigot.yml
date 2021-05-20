@@ -34,7 +34,7 @@ settings:
   log-villager-deaths: true
   timeout-time: 60
   restart-on-crash: true
-  restart-script: dmblcraft.bat
+  restart-script: screen.sh
   bungeecord: false
   netty-threads: 4
   late-bind: true
@@ -162,5 +162,7 @@ world-settings:
       min: 45.0
   worldeditregentempworld:
     verbose: false
+  umoa:
+    view-distance: 8
 players:
   disable-saving: true

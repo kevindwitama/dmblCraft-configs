@@ -345,7 +345,7 @@ world-settings:
       - oak_planks
       - stone
     keep-spawn-loaded: true
-    no-tick-view-distance: 12
+    no-tick-view-distance: 16
   umoa_nether:
     anti-xray:
       enabled: false
