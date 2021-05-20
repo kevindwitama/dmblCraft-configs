@@ -1,1 +1,0 @@
-curl -# -o "purpurclip.jar" -z "purpurclip.jar" "https://purpur.pl3x.net/api/v1/purpur/1.16.5/latest/download"
