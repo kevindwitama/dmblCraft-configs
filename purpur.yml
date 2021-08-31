@@ -463,7 +463,7 @@ world-settings:
         - minecraft:dark_prismarine
         mob-damage:
           distance: 64.0
-          damage-amount: 6.0
+          damage-amount: 2.0
       budding_amethyst:
         silk-touch: false
       big_dripleaf:
