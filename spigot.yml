@@ -31,6 +31,7 @@ messages:
   outdated-server: Server not yet updated! We are on {0}
   restart: dmblCraft will BRB.
 settings:
+  log-named-deaths: true
   log-villager-deaths: true
   timeout-time: 60
   restart-on-crash: true

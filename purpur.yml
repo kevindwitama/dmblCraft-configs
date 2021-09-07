@@ -9,7 +9,7 @@
 # Wiki: https://github.com/pl3xgaming/Purpur/wiki 
 
 verbose: false
-config-version: 18
+config-version: 20
 settings:
   server-mod-name: dmblCraft (Purpur)
   tps-catchup: false
@@ -23,7 +23,7 @@ settings:
     disable-note-block-updates: false
     disable-mushroom-updates: false
     barrel:
-      six-rows: false
+      rows: 3
     ender_chest:
       six-rows: false
       use-permissions-for-rows: false
@@ -110,10 +110,12 @@ settings:
       buried_treasure: -1
       mineshaft: -1
       stronghold: -1
+  timings: {}
   entity:
     enderman:
       short-height: false
   logger:
+    suppress-unrecognized-recipe-errors: true
     suppress-init-legacy-material-errors: false
     suppress-ignored-advancement-warnings: true
     hex-color-support-in-console: true
@@ -164,6 +166,8 @@ settings:
 world-settings:
   default:
     gameplay-mechanics:
+      rain-stops-after-sleep: true
+      thunder-stops-after-sleep: true
       projectiles-bypass-mob-griefing: false
       mobs-ignore-rails: false
       entity-blindness-multiplier: 1.0
@@ -193,6 +197,7 @@ world-settings:
       raid-cooldown-seconds: 0
       animal-breeding-cooldown-seconds: 0
       player:
+        shift-right-click-repairs-mending-points: 4
         burp-when-full: false
         ridable-in-water: false
         critical-damage-multiplier: 1.5
@@ -208,11 +213,11 @@ world-settings:
           equation: expLevel * expLevel + 6 * expLevel
           maximum: 5500
         idle-timeout:
-          mods-target: true
           kick-if-idle: true
           tick-nearby-entities: true
           count-as-sleeping: true
           update-tab-list: false
+          mobs-target: false
         netherite-fire-resistance:
           duration: 240
           amplifier: 0
@@ -463,7 +468,7 @@ world-settings:
         - minecraft:dark_prismarine
         mob-damage:
           distance: 64.0
-          damage-amount: 2.0
+          damage-amount: 4.0
       budding_amethyst:
         silk-touch: false
       big_dripleaf:
@@ -471,6 +476,10 @@ world-settings:
           PARTIAL: 10
           FULL: 100
           UNSTABLE: 10
+      flowering_azalea:
+        growth-chance: 0.0
+      azalea:
+        growth-chance: 0.0
     mobs:
       pillager:
         bypass-mob-griefing: false
@@ -757,6 +766,7 @@ world-settings:
         attributes:
           max_health: 100.0
       cow:
+        naturally-aggressive-to-players-chance: 0.0
         ridable: false
         ridable-in-water: false
         feed-mushrooms-for-mooshroom: 0
@@ -775,6 +785,7 @@ world-settings:
         attributes:
           max_health: 10.0
       dolphin:
+        naturally-aggressive-to-players-chance: 0.0
         ridable: true
         disable-treasure-searching: true
         spit:
@@ -1024,6 +1035,7 @@ world-settings:
         attributes:
           max_health: 20.0
       shulker:
+        change-color-with-dye: true
         ridable: false
         ridable-in-water: false
         attributes:
@@ -1107,129 +1119,133 @@ world-settings:
       axe:
         strippables:
           minecraft:dark_oak_log:
-            drops: 
-              minecraft:paper : 0.5
+            drops:
+              minecraft:paper: 0.5
             into: minecraft:stripped_dark_oak_log
           minecraft:acacia_wood:
-            drops: 
-              minecraft:paper : 0.5
+            drops:
+              minecraft:paper: 0.5
             into: minecraft:stripped_acacia_wood
           minecraft:jungle_wood:
-            drops: 
-              minecraft:paper : 0.5
+            drops:
+              minecraft:paper: 0.5
             into: minecraft:stripped_jungle_wood
           minecraft:birch_log:
-            drops: 
-              minecraft:paper : 0.5
+            drops:
+              minecraft:paper: 0.5
             into: minecraft:stripped_birch_log
           minecraft:birch_wood:
-            drops: 
-              minecraft:paper : 0.5
+            drops:
+              minecraft:paper: 0.5
             into: minecraft:stripped_birch_wood
           minecraft:acacia_log:
-            drops: 
-              minecraft:paper : 0.5
+            drops:
+              minecraft:paper: 0.5
             into: minecraft:stripped_acacia_log
           minecraft:dark_oak_wood:
-            drops: 
-              minecraft:paper : 0.5
+            drops:
+              minecraft:paper: 0.5
             into: minecraft:stripped_dark_oak_wood
+          minecraft:jungle_log:
             drops: 
               minecraft:paper : 0.5
             into: minecraft:stripped_jungle_log
           minecraft:oak_log:
-            drops: 
-              minecraft:paper : 0.5
+            drops:
+              minecraft:paper: 0.5
             into: minecraft:stripped_oak_log
           minecraft:spruce_log:
-            drops: 
-              minecraft:paper : 0.5
+            drops:
+              minecraft:paper: 0.5
             into: minecraft:stripped_spruce_log
           minecraft:warped_stem:
             drops: 
-              minecraft:paper : 0.5
+              minecraft:nether_wart : 1.0
             into: minecraft:stripped_warped_stem
           minecraft:crimson_stem:
-            drops: {}
+            drops: 
+              minecraft:nether_wart : 1.0
             into: minecraft:stripped_crimson_stem
           minecraft:warped_hyphae:
-            drops: {}
+            drops: 
+              minecraft:nether_wart : 1.0
             into: minecraft:stripped_warped_hyphae
           minecraft:crimson_hyphae:
-            drops: {}
+            drops: 
+              minecraft:nether_wart : 1.0
             into: minecraft:stripped_crimson_hyphae
           minecraft:spruce_wood:
-            drops: 
-              minecraft:paper : 0.5
+            drops:
+              minecraft:paper: 0.5
             into: minecraft:stripped_spruce_wood
           minecraft:oak_wood:
-            drops: 
-              minecraft:paper : 0.5
+            drops:
+              minecraft:paper: 0.5
             into: minecraft:stripped_oak_wood
         waxables:
           minecraft:waxed_oxidized_cut_copper:
             drops:
-              minecraft:honeycomb : 0.2
+              minecraft:honeycomb: 0.2
             into: minecraft:oxidized_cut_copper
           minecraft:waxed_weathered_copper:
             drops:
-              minecraft:honeycomb : 0.2
+              minecraft:honeycomb: 0.2
             into: minecraft:weathered_copper
           minecraft:waxed_oxidized_copper:
             drops:
-              minecraft:honeycomb : 0.2
+              minecraft:honeycomb: 0.2
             into: minecraft:oxidized_copper
           minecraft:waxed_copper_block:
             drops:
-              minecraft:honeycomb : 0.2
+              minecraft:honeycomb: 0.2
             into: minecraft:copper_block
           minecraft:waxed_cut_copper_slab:
             drops:
-              minecraft:honeycomb : 0.2
+              minecraft:honeycomb: 0.2
             into: minecraft:cut_copper_slab
           minecraft:waxed_exposed_cut_copper_slab:
             drops:
-              minecraft:honeycomb : 0.2
+              minecraft:honeycomb: 0.2
             into: minecraft:exposed_cut_copper_slab
           minecraft:waxed_weathered_cut_copper_stairs:
             drops:
-              minecraft:honeycomb : 0.2
+              minecraft:honeycomb: 0.2
             into: minecraft:weathered_cut_copper_stairs
           minecraft:waxed_oxidized_cut_copper_stairs:
             drops:
-              minecraft:honeycomb : 0.2
+              minecraft:honeycomb: 0.2
             into: minecraft:oxidized_cut_copper_stairs
           minecraft:waxed_exposed_cut_copper:
             drops:
-              minecraft:honeycomb : 0.2
+              minecraft:honeycomb: 0.2
             into: minecraft:exposed_cut_copper
           minecraft:waxed_cut_copper:
             drops:
-              minecraft:honeycomb : 0.2
+              minecraft:honeycomb: 0.2
             into: minecraft:cut_copper
           minecraft:waxed_cut_copper_stairs:
             drops:
-              minecraft:honeycomb : 0.2
+              minecraft:honeycomb: 0.2
             into: minecraft:cut_copper_stairs
           minecraft:waxed_exposed_copper:
             drops:
-              minecraft:honeycomb : 0.2
+              minecraft:honeycomb: 0.2
             into: minecraft:exposed_copper
           minecraft:waxed_weathered_cut_copper_slab:
             drops:
-              minecraft:honeycomb : 0.2
+              minecraft:honeycomb: 0.2
             into: minecraft:weathered_cut_copper_slab
           minecraft:waxed_oxidized_cut_copper_slab:
             drops:
-              minecraft:honeycomb : 0.2
+              minecraft:honeycomb: 0.2
             into: minecraft:oxidized_cut_copper_slab
           minecraft:waxed_exposed_cut_copper_stairs:
             drops:
-              minecraft:honeycomb : 0.2
+              minecraft:honeycomb: 0.2
             into: minecraft:exposed_cut_copper_stairs
           minecraft:waxed_weathered_cut_copper:
             drops:
-              minecraft:honeycomb : 0.2
+              minecraft:honeycomb: 0.2
             into: minecraft:weathered_cut_copper
         weatherables:
           minecraft:weathered_copper:
