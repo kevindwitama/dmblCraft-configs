@@ -166,7 +166,7 @@ settings:
     death:
       only-broadcast-to-affected-player: false
   network:
-    upnp-port-forwarding: false
+    upnp-port-forwarding: true
 world-settings:
   default:
     gameplay-mechanics:
