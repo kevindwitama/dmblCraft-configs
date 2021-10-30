@@ -12,7 +12,7 @@
 
 use-display-name-in-quit-message: true
 verbose: false
-config-version: 22
+config-version: 23
 timings:
   enabled: true
   verbose: true
@@ -30,8 +30,9 @@ timings:
   history-interval: 300
   history-length: 3600
   server-name: dmblCraft
-  url: https://timings.pl3x.net
+  url: https://timings.aikar.co
 settings:
+  log-player-ip-addresses: true
   send-full-pos-for-hard-colliding-entities: true
   lag-compensate-block-breaking: true
   log-named-entity-deaths: true
@@ -113,23 +114,23 @@ settings:
     target-player-chunk-send-rate: 100.0
     global-max-chunk-send-rate: -1.0
     enable-frustum-priority: false
-    global-max-chunk-load-rate: 300.0
+    global-max-chunk-load-rate: -1.0
     player-max-concurrent-loads: 4.0
     global-max-concurrent-loads: 500.0
 messages:
-  no-permission: '&cI''m sorry, but you do not have permission to perform this command.
-    Please contact the server administrators if you believe that this is in error.'
+  no-permission: '&cYou do not have permission to perform this command'
   kick:
-    flying-player: Kicked for flying, may be due to lag.
-    flying-vehicle: Kicked for flying, may be due to lag.
-    authentication-servers-down: Mojang Authentication servers are down. Please wait
-      and blame Jeb.
+    flying-player: Kicked for flying (might be from lag).
+    flying-vehicle: Kicked for flying (might be from lag).
+    authentication-servers-down: Mojang login servers are down. Please wait and blame
+      Jeb.
     connection-throttle: Connection throttled! Please wait before reconnecting.
 world-settings:
   default:
+    split-overstacked-loot: true
     map-item-frame-cursor-update-interval: 10
     fix-items-merging-through-walls: false
-    seed-based-feature-search-loads-chunks: true
+    seed-based-feature-search-loads-chunks: false
     show-sign-click-command-failure-msgs-to-player: false
     map-item-frame-cursor-limit: 128
     allow-player-cramming-damage: false
@@ -283,6 +284,7 @@ world-settings:
       items:
         DIRT: 1200
         COBBLESTONE: 1200
+        COBBLED_DEEPSLATE: 1200
         STONE: 1200
         NETHERRACK: 1200
         ACACIA_SAPLING: 1200
@@ -299,6 +301,18 @@ world-settings:
         ROTTEN_FLESH: 1200
         BONE: 1200
         ARROW: 1200
+        PUMPKIN: 1200
+        MELON_SLICE: 1200
+        KELP: 1200
+        BAMBOO: 1200
+        SUGAR_CANE: 1200
+        TWISTING_VINES: 1200
+        WEEPING_VINES: 1200
+        CACTUS: 1200
+        COD: 1200
+        SALMON: 1200
+        TROPICAL_FISH: 1200
+        EGG: 1200
         DIAMOND: 18000
         DIAMOND_ORE: 18000
         DIAMOND_BLOCK: 36000
@@ -335,7 +349,7 @@ world-settings:
       spawn-chance-min: 25
       spawn-chance-max: 75
     mobs-can-always-pick-up-loot:
-      zombies: false
+      zombies: true
       skeletons: false
     door-breaking-difficulty:
       zombie:
@@ -383,11 +397,14 @@ world-settings:
     unsupported-settings:
       fix-invulnerable-end-crystal-exploit: true
     spawn-limits:
-      monsters: 20
-      animals: 5
-      water-animals: 2
-      water-ambient: 2
-      ambient: 1
+      ambient: -1
+      monsters: -1
+      animals: -1
+      water-animals: -1
+      water-ambient: -1
+      water-underground-creature: -1
+    feature-seeds:
+      generate-random-seeds-for-all: false
   umoa:
     anti-xray:
       enabled: false
@@ -416,11 +433,11 @@ world-settings:
     keep-spawn-loaded: true
     no-tick-view-distance: 16
     spawn-limits:
-      ambient: 3
-      monsters: 30
-      animals: 8
-      water-animals: 5
-      water-ambient: 8
+      ambient: -1
+      monsters: -1
+      animals: -1
+      water-animals: -1
+      water-ambient: -1
   umoa_nether:
     anti-xray:
       enabled: false
@@ -454,12 +471,6 @@ world-settings:
       - oak_planks
       - stone
     no-tick-view-distance: 12
-    spawn-limits:
-      ambient: 3
-      monsters: 30
-      animals: 8
-      water-animals: 5
-      water-ambient: 8
   rodina_nether:
     anti-xray:
       enabled: false
@@ -495,12 +506,6 @@ world-settings:
       - stone
     auto-save-interval: 12000
     no-tick-view-distance: 12
-    spawn-limits:
-      ambient: 3
-      monsters: 30
-      animals: 8
-      water-animals: 5
-      water-ambient: 8
   oranua:
     auto-save-interval: 12000
     no-tick-view-distance: 10

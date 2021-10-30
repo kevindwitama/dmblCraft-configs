@@ -24,12 +24,12 @@ commands:
   - testforblock
   - tellraw
 messages:
-  whitelist: You are not whitelisted on this server, contact dmblc#8659 on Discord.
-  unknown-command: Unknown command. Type "/help" for help.
-  server-full: The server is full!
-  outdated-client: Update your client! We are on {0}
-  outdated-server: Server not yet updated! We are on {0}
-  restart: dmblCraft will BRB.
+  whitelist: You are not whitelisted, contact dmblc#8659 on Discord.
+  unknown-command: Unknown command.
+  server-full: dmblCraft is full!
+  outdated-client: Update your client! dmblCraft is on {0}!
+  outdated-server: Downgrade your client! dmblCraft is still on {0}!
+  restart: dmblCraft is restarting, we'll be right back.
 settings:
   log-named-deaths: true
   log-villager-deaths: true
@@ -39,9 +39,9 @@ settings:
   bungeecord: false
   netty-threads: 4
   late-bind: true
-  sample-count: 15
+  sample-count: 12
   player-shuffle: 0
-  user-cache-size: 20
+  user-cache-size: 30
   save-user-cache-on-stop-only: true
   moved-wrongly-threshold: 0.0625
   moved-too-quickly-multiplier: 10.0
@@ -62,6 +62,7 @@ advancements:
   - '*'
 world-settings:
   default:
+    thunder-chance: 100000
     seed-bastion: 30084232
     seed-fortress: 30084232
     seed-mansion: 10387319
@@ -127,27 +128,27 @@ world-settings:
       villagers-active-for-panic: true
       tick-inactive-villagers: false
       wake-up-inactive:
-        animals-max-per-tick: 2
+        animals-max-per-tick: 1
         animals-every: 1200
-        animals-for: 40
+        animals-for: 100
         monsters-max-per-tick: 4
         monsters-every: 400
-        monsters-for: 60
-        villagers-max-per-tick: 1
+        monsters-for: 100
+        villagers-max-per-tick: 2
         villagers-every: 600
-        villagers-for: 20
-        flying-monsters-max-per-tick: 1
+        villagers-for: 100
+        flying-monsters-max-per-tick: 0
         flying-monsters-every: 200
-        flying-monsters-for: 60
+        flying-monsters-for: 100
     entity-tracking-range:
-      players: 96
-      animals: 48
-      monsters: 64
-      misc: 32
-      other: 48
+      players: 168
+      animals: 72
+      monsters: 72
+      misc: 72
+      other: 72
     ticks-per:
       hopper-transfer: 8
-      hopper-check: 1
+      hopper-check: 3
     hunger:
       jump-walk-exhaustion: 0.05
       jump-sprint-exhaustion: 0.2
@@ -161,9 +162,26 @@ world-settings:
       entity: 1000
     squid-spawn-range:
       min: 45.0
+  creative:
+    entity-activation-range:
+      villagers-work-immunity-after: 0
+      villagers-work-immunity-for: 0
+      villagers-active-for-panic: true
+      tick-inactive-villagers: false
+      wake-up-inactive:
+        animals-max-per-tick: 0
+        animals-every: 1200
+        animals-for: 40
+        monsters-max-per-tick: 0
+        monsters-every: 400
+        monsters-for: 60
+        villagers-max-per-tick: 2
+        villagers-every: 600
+        villagers-for: 20
+        flying-monsters-max-per-tick: 0
+        flying-monsters-every: 200
+        flying-monsters-for: 60
   worldeditregentempworld:
     verbose: false
-  umoa:
-    view-distance: 8
 players:
   disable-saving: true

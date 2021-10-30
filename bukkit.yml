@@ -24,19 +24,21 @@ settings:
   connection-throttle: 4000
   query-plugins: true
   deprecated-verbose: default
-  shutdown-message: dmblCraft will BRB.
+  shutdown-message: dmblCraft is shutting down, we'll be right back.
   world-container: worlds
 spawn-limits:
   ambient: 3
-  monsters: 30
+  monsters: 20
   animals: 8
   water-animals: 5
   water-ambient: 8
+  water-underground-creature: 5
 ticks-per:
-  ambient-spawns: 2
+  ambient-spawns: 20
   animal-spawns: 400
-  monster-spawns: 4
-  water-ambient-spawns: 3
-  water-spawns: 2
+  monster-spawns: 10
+  water-ambient-spawns: 20
+  water-spawns: 20
+  water-underground-creature-spawns: 400
   autosave: 6000
 aliases: now-in-commands.yml
